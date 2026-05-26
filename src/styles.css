@@ -1,3 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Lexend Peta', sans-serif;
+  --font-logo: 'BBH Bartle', 'Lexend Peta', sans-serif;
+  --font-title: 'Lexend Peta', sans-serif;
+
+  --color-primary: #8b5cf6;
+  --color-secondary: #1e3a8a;
+  --color-accent: #6d28d9;
+  --color-bg: #0a0a0a;
+}
+
+:root {
+  background-color: var(--color-bg);
+  color: white;
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: var(--font-logo);
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+h2, h3, h4, h5, h6, p, a {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+}
+
+.logo-text {
+  font-family: var(--font-logo);
+}
+
+/* Y2K Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Restoring original oversized text style */
+.oversized-text {
+  font-family: var(--font-logo);
+  font-size: clamp(4rem, 15vw, 12rem);
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
