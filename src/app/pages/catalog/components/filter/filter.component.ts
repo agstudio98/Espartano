@@ -8,22 +8,23 @@ import { IconComponent } from '../../../../components/icon/icon.component';
   standalone: true,
   imports: [CommonModule, FormsModule, IconComponent],
   template: `
-    <section class="px-4 py-2 flex flex-wrap gap-4 items-center justify-between glass mb-6 mx-4 rounded-2xl">
-      <div class="flex gap-4 flex-wrap">
+    <section class="px-4 py-4 flex flex-wrap gap-4 items-center justify-between glass mb-6 mx-4 rounded-2xl">
+      <div class="flex gap-2 sm:gap-4 flex-wrap w-full justify-center md:w-auto md:justify-start">
         <button 
           *ngFor="let cat of categoriesWithIcons"
           (click)="selectCategory(cat.name)"
           [class.bg-primary]="activeCategory() === cat.name"
           [class.border-primary]="activeCategory() === cat.name"
-          class="group flex flex-col items-center gap-2 px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5 transition-all min-w-[80px]">
+          class="group flex flex-col items-center gap-2 px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-white/10 hover:bg-white/5 transition-all min-w-[70px] sm:min-w-[80px] cursor-pointer">
           <div class="opacity-40 group-hover:opacity-100 transition-opacity">
-            <app-icon [name]="cat.iconName" [size]="20"></app-icon>
+            <app-icon [name]="cat.iconName" [size]="16" class="sm:hidden"></app-icon>
+            <app-icon [name]="cat.iconName" [size]="20" class="hidden sm:block"></app-icon>
           </div>
-          <span class="font-black uppercase text-[8px] tracking-widest">{{cat.name}}</span>
+          <span class="font-black uppercase text-[7px] sm:text-[8px] tracking-widest">{{cat.name}}</span>
         </button>
       </div>
       
-      <div class="relative w-full md:w-64">
+      <div class="relative w-full md:w-64 mt-2 md:mt-0">
         <input 
           type="text" 
           [(ngModel)]="searchTerm"

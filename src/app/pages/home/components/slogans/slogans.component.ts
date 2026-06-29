@@ -4,12 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-home-slogans',
   standalone: true,
   template: `
-    <section class="py-20 flex flex-col gap-10 overflow-hidden">
+    <section class="py-10 sm:py-20 flex flex-col gap-10 overflow-hidden">
       <div class="flex whitespace-nowrap gap-10 animate-[scroll_40s_linear_infinite]">
-        <div class="text-9xl font-black opacity-10 uppercase tracking-tighter">IMPACTO TOTAL</div>
-        <div class="text-9xl font-black opacity-10 uppercase tracking-tighter">OVERSYSTEM</div>
-        <div class="text-9xl font-black opacity-10 uppercase tracking-tighter">ESTILO Y2K</div>
-        <div class="text-9xl font-black opacity-10 uppercase tracking-tighter">NUEVA CORDOBA</div>
+        <div class="text-6xl sm:text-8xl md:text-9xl font-black opacity-10 uppercase tracking-tighter">IMPACTO TOTAL</div>
+        <div class="text-6xl sm:text-8xl md:text-9xl font-black opacity-10 uppercase tracking-tighter">OVERSYSTEM</div>
+        <div class="text-6xl sm:text-8xl md:text-9xl font-black opacity-10 uppercase tracking-tighter">ESTILO Y2K</div>
+        <div class="text-6xl sm:text-8xl md:text-9xl font-black opacity-10 uppercase tracking-tighter">NUEVA CORDOBA</div>
       </div>
     </section>
   `,

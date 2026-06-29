@@ -6,16 +6,16 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="p-10">
-      <h2 class="text-4xl font-black mb-10 tracking-widest text-center">PROMOCIONES TOP</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div *ngFor="let item of topProducts" class="glass group relative overflow-hidden rounded-3xl p-6 transition-all hover:-translate-y-2 hover:border-primary/50">
-          <div class="aspect-square bg-white/5 rounded-2xl mb-6 overflow-hidden flex items-center justify-center">
-            <span class="text-8xl opacity-10 font-black">{{item.id}}</span>
+    <section class="p-4 sm:p-10">
+      <h2 class="text-2xl sm:text-4xl font-black mb-6 sm:mb-10 tracking-widest text-center">PROMOCIONES TOP</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+        <div *ngFor="let item of topProducts" class="glass group relative overflow-hidden rounded-2xl sm:rounded-3xl p-4 sm:p-6 transition-all hover:-translate-y-2 hover:border-primary/50">
+          <div class="aspect-square bg-white/5 rounded-xl sm:rounded-2xl mb-4 sm:mb-6 overflow-hidden flex items-center justify-center">
+            <span class="text-6xl sm:text-8xl opacity-10 font-black">{{item.id}}</span>
           </div>
-          <h3 class="text-xl font-black">{{item.name}}</h3>
-          <p class="text-primary font-bold mt-2 text-2xl">{{item.price | currency}}</p>
-          <div class="absolute top-4 right-4 bg-accent text-xs font-black px-3 py-1 rounded-full">-20% OFF</div>
+          <h3 class="text-base sm:text-xl font-black">{{item.name}}</h3>
+          <p class="text-primary font-bold mt-2 text-lg sm:text-2xl">{{item.price | currency}}</p>
+          <div class="absolute top-3 right-3 sm:top-4 sm:right-4 bg-accent text-[10px] sm:text-xs font-black px-3 py-1 rounded-full">-20% OFF</div>
         </div>
       </div>
     </section>
